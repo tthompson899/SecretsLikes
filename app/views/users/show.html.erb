@@ -19,4 +19,8 @@
 
   <p><%= s.likes.count %> likes</p>
 <% end %>
-  <h3>Secrets Liked</h3>
+<h3>Secrets Liked</h3>
+<% @likes.each do |l| %>
+      <%= l.content %>
+      <p><%= l.likes.count %> Likes</p>
+<% end %>

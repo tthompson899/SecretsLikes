@@ -23,6 +23,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @secret = @user.secrets
+    @likes = Secret.joins(:likes)
   end
 
   def edit

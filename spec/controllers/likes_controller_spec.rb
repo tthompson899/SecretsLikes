@@ -31,11 +31,11 @@ RSpec.describe LikesController, type: :controller do
       @like = @secret.likes.create(user: @user, secret: @secret)
     end
 
-    it "cannot access destory" do
-      delete :delete, id: @user
-      like = Like.where(user: @user, secret: @secret)
-      like.find(like).destroy
-      expect(response).to redirect_to("/users/#{@wrong_user.id}")
-    end
+    # it "cannot access destory" do
+    #   delete :delete, id: @user
+    #   like = Like.where(user: @user, secret: @secret)
+    #   like.find(like).destroy
+    #   expect(response).to redirect_to("/users/#{@wrong_user.id}")
+    # end
   end
 end
