@@ -21,6 +21,8 @@
 <% end %>
 <h3>Secrets Liked</h3>
 <% @likes.each do |l| %>
-      <%= l.content %>
-      <p><%= l.likes.count %> Likes</p>
+    <%= l.content %>
+    <p><%= l.likes.count %> Likes</p>
 <% end %>
+
+<a href="/secrets">All Secrets</a>

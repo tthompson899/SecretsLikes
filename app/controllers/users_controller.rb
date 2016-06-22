@@ -23,7 +23,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @secret = @user.secrets
-    @likes = Secret.joins(:likes)
+    @likes = User.find(params[:id]).secrets_liked
+    # render json: Secret.find(19).users_liked
   end
 
   def edit
